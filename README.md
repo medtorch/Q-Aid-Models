@@ -35,6 +35,7 @@ Our model uses a Densenet121 architecture from the [torchvision](https://pytorch
 ## Datasets :heavy_check_mark:
 
 The datasets used in this project are augumented version of:
+* [VQA-RAD](https://www.nature.com/articles/sdata2018251#data-citations)
 * [Tiny ImageNet](https://tiny-imagenet.herokuapp.com/)
 * [Medical Decathlon](http://medicaldecathlon.com/)
 * [Mednist](https://www.dropbox.com/s/5wwskxctvcxiuea/MedNIST.tar.gz) - the dataset is kindly made available by [Dr. Bradley J. Erickson M.D., Ph.D.](https://www.mayo.edu/research/labs/radiology-informatics/overview) (Department of Radiology, Mayo Clinic) under the Creative Commons [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
