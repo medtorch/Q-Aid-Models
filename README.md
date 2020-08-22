@@ -2,7 +2,7 @@
 
 Q-Aid models are the pytorch modules currently used in the Q-Aid-Core, trained on publicly available datasets. Each model has a brief explanation below and an example of how to make inference on the model.
 
-### Visual Question Answerion - VQA
+### Visual Question Answerion :question:
 
 Visual Question Answering is a challenging task for modern Machine Learning. It requires an AI system that can understand both text and language, such that it is able to answer text-based questions given the visual context (an image, CT scan, MRI scan etc.).
 
