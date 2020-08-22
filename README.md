@@ -12,7 +12,7 @@ Neural network-based approaches do typically require large amounts of data. Due 
 
 Our VQA engine is based on MedVQA, a state-of-the-art model trained on medical images and questions, using Meta-Learning and a Convolutional Autoencoder for representation extraction, as presented [here](https://github.com/aioz-ai/MICCAI19-MedVQA/tree/c076f2cc174def26fa597fce4235b93f56658cc8).
 
-### Medical Brain Segmentation
+### Medical Brain Segmentation :alien:
 
 Medical segmentation is the task of highlighting a region or a set of regions with a specific property. While this task is mostly solved in the general-purpose setup, in the medical scene this task is quite hard because of the difficulty of the problem, humans have a bigger error rate when highlighting abnormalities in the brain and the lack of data.
 
@@ -20,19 +20,19 @@ Our model uses an [UNet](https://arxiv.org/pdf/1505.04597.pdf) architecture, a r
 
 The input image is a 3-channel brain MRI image, the output is a one-channel probability map of abnormality regions, being afterwards transformed into a binary segmentation mask.
 
-### Medical Labelling
+### Medical Labelling :memo:
 
 Medical labelling is the task of choosing what kind of image the user is feeding into the app, the possible labels are brain, chest, breast, eyes, heart, elbow, forearm, hand, humerus, shoulder, wrist. Currently, our VQA model has support only for brain and chest, but we are working on adding support to multiple labels.
 
 Our model uses a Densenet121 architecture from the [torchvision](https://pytorch.org/docs/stable/torchvision/models.html) module, the architecture being proved better in medical imagery by projects like [MONAI](https://github.com/Project-MONAI/MONAI) that uses it extensively.
 
-### Medical Filtering
+### Medical Filtering :no_entry_sign:
 
 Medical filtering is the task of labelling images in two sets, medical and non-medical, as we want to filter all non-medical from being fed into the other machine learning models.
 
 Our model uses a Densenet121 architecture from the [torchvision](https://pytorch.org/docs/stable/torchvision/models.html) module.
 
-## Datasets
+## Datasets :heavy_check_mark:
 
 The datasets used in this project are augumented version of:
 * [Tiny ImageNet](https://tiny-imagenet.herokuapp.com/)
