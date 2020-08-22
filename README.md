@@ -38,10 +38,15 @@ Our model uses a Densenet121 architecture from the torchvision[1] module, the ar
 
 ### Medical Filtering
 
-Medical filtering is the task of labeling images in two sets, medical and non-medical, as we want to filter all non-medical from being fed into the other machine learning models.
+Medical filtering is the task of labelling images in two sets, medical and non-medical, as we want to filter all non-medical from being fed into the other machine learning models.
 
 Our model uses a Densenet121 architecture from the torchvision[1] module.
 
 [1]: https://pytorch.org/docs/stable/torchvision/models.html
 
 ## Datasets
+
+The datasets used in this project are augumented version of:
+* [Tiny ImageNet](https://tiny-imagenet.herokuapp.com/)
+* [Medical Decathlon](http://medicaldecathlon.com/)
+* [Mednist](https://www.dropbox.com/s/5wwskxctvcxiuea/MedNIST.tar.gz) - the dataset is kindly made available by [Dr. Bradley J. Erickson M.D., Ph.D.](https://www.mayo.edu/research/labs/radiology-informatics/overview) (Department of Radiology, Mayo Clinic) under the Creative Commons [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
