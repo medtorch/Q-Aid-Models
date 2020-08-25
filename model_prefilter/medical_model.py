@@ -149,7 +149,10 @@ def train():
 
     model, hist = train_model(model, dataloaders_dict, criterion, optimizer_ft)
 
-    torch.save(model.state_dict(), "./saved_state_dict.pt")
+    torch.save(
+        model.state_dict(),
+        os.path.abspath(os.path.dirname(__file__)) + "/saved_state_dict.pt",
+    )
 
 
 def load_classifier(path):

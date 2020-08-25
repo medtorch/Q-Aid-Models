@@ -1,3 +1,4 @@
+import os
 import torch
 from torchvision import transforms, models
 from PIL import Image
@@ -34,7 +35,11 @@ class Prefilter:
             )
         )
 
-        state_dict = torch.load("medical_binary_classifier.pt", device)
+        state_dict = torch.load(
+            os.path.abspath(os.path.dirname(__file__))
+            + "/medical_binary_classifier.pt",
+            device,
+        )
         self.model.load_state_dict(state_dict)
         self.model.eval()
 

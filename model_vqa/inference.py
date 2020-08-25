@@ -1,5 +1,6 @@
 import base64
 import sys
+import os
 from pathlib import Path
 
 import cv2
@@ -8,12 +9,12 @@ import torch
 import torchvision.transforms.functional as TF
 from bunch import Bunch
 
-sys.path.append("./MICCAI19-MedVQA")
+sys.path.append(os.path.abspath(os.path.dirname(__file__)) + "/MICCAI19-MedVQA")
 import base_model
 import dataset_RAD
 import utils
 
-model_root = Path("MICCAI19-MedVQA")
+model_root = Path(os.path.abspath(os.path.dirname(__file__)) + "/MICCAI19-MedVQA")
 
 torch.backends.cudnn.benchmark = True
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")

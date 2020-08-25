@@ -1,19 +1,23 @@
+import os
+import sys
 import numpy as np
 import torch
 from medpy.filter.binary import largest_connected_component
 import base64
-from unet import UNet
-from utils import gray2rgb, outline, normalize_volume
 from io import BytesIO, StringIO
 from skimage.io import imsave
-
 from PIL import Image
+
+
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+from unet import UNet
+from segmentation_utils import gray2rgb, outline, normalize_volume
 
 
 class Segmentation:
     def __init__(self):
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        weights = "./weights/unet.pt"
+        weights = os.path.abspath(os.path.dirname(__file__)) + "/weights/unet.pt"
 
         self.model = UNet(in_channels=3, out_channels=1)
         state_dict = torch.load(weights, map_location=self.device)
